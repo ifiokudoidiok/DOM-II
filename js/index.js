@@ -20,9 +20,6 @@ navEvent.addEventListener("mouseover", ( event ) =>{
 }, false);
 
 //keydown
-// const input = document.querySelector('input');
-
-// const log = document.getElementById('log');
 window.addEventListener('keydown', ()=>{
     introText.style.color = "red";
       setTimeout(() => {
@@ -30,3 +27,14 @@ window.addEventListener('keydown', ()=>{
       }, 500);
 });
 
+
+//wheel
+const wheel = document.querySelector(".footer p");
+wheel.addEventListener("wheel",  () => {
+    wheel.style.fontSize = "3rem";
+    setTimeout(() => {
+      wheel.style.fontSize = "";
+    }, 500);
+  });
+
+ 
