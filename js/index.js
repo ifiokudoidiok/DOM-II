@@ -112,3 +112,11 @@ window.addEventListener('scroll', function(e) {
 
   console.log(last_known_scroll_position);
 });
+
+//select
+ const input = document.querySelector('input');
+  input.addEventListener('select', (event) => {
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    console.log(`"${selection}" was selected from the box`)
+  }
+  );
