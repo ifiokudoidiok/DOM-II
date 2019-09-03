@@ -87,3 +87,9 @@ dropTarget.addEventListener("dragenter", (event) => {
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded!');
   });
+
+  //focus
+  const focusHere = document.querySelector(".footer input");
+  focusHere.addEventListener('focus', (event) => {
+    focusHere.style.background = "orange";
+  });
