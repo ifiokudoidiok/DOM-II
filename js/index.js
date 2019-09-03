@@ -83,3 +83,7 @@ dropTarget.addEventListener("dragenter", (event) => {
   }, false);
 
 
+//load
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded!');
+  });
