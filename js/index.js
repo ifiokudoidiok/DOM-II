@@ -37,4 +37,49 @@ wheel.addEventListener("wheel",  () => {
     }, 500);
   });
 
- 
+ //drag/drop
+ const logoHead = document.querySelector(".logo-heading");
+ const dropTarget = document.querySelectorAll(".text-content p")[0];
+ logoHead.draggable = true;
+ dropTarget.draggable = true;
+
+ logoHead.addEventListener("drag", (event) => {
+
+}, false);
+
+logoHead.addEventListener("dragstart", (event) => {
+    // store a ref. on the dragged elem
+    dragged = event.target;
+    // make it half transparent
+    event.target.style.opacity = .5;
+  }, false);
+
+  logoHead.addEventListener("dragend", (event) => {
+    // reset the transparency
+    event.target.style.opacity = "";
+  }, false);
+
+
+ dropTarget.addEventListener('dragover', event => {
+  event.preventDefault();
+  console.log("Element was dragged over me!")
+})
+
+dropTarget.addEventListener("dragenter", (event) => {
+    // highlight potential drop target when the draggable element enters it
+    event.target.style.background = "grey";
+    setTimeout(() => {
+        event.target.style.background = "";
+      }, 500);
+  
+  }, false);
+
+  dropTarget.addEventListener("drop", (event) => {
+    event.preventDefault();
+    logoHead.style.display = "none";
+    setTimeout(() => {
+        logoHead.style.display = "";
+      }, 500);
+  }, false);
+
+
