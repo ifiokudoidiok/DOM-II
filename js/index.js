@@ -120,3 +120,14 @@ window.addEventListener('scroll', function(e) {
     console.log(`"${selection}" was selected from the box`)
   }
   );
+
+  //dblclick
+
+  logoHead.addEventListener('dblclick', function (e) {
+    // navEvent.classList.toggle('large');
+    // logoHead.style.display = "none";
+    logoHead.style.opacity = .05;
+    setTimeout(() => {
+        logoHead.style.opacity = "";;
+      }, 2500);
+  });
