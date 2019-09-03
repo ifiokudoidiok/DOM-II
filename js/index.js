@@ -93,3 +93,8 @@ window.addEventListener('load', (event) => {
   focusHere.addEventListener('focus', (event) => {
     focusHere.style.background = "orange";
   });
+
+  //resize
+  window.addEventListener('resize', (event) => {
+    console.log('page is being resized!');
+  });
